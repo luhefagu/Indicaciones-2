@@ -1727,7 +1727,6 @@ Furosemida 40mg al día"></textarea>
 			            if (isAdministered || isSuspended || schedule.id === 'SOS') buttonClasses += ' disabled-in-edit';
 			            else buttonClasses += ' editable-in-edit';
 			        } else {
-						debugger;
 			            // ¡LÓGICA REFACTORIZADA!
 			            // Si es un huérfano o la indicación está suspendida, usamos el estilo de "huérfano".
 			            if (isOrphan || isSuspended) {
@@ -2159,7 +2158,6 @@ Furosemida 40mg al día"></textarea>
 				this.correctionReasonsContainer.classList.add('hidden');
 
 			    // ¡LÓGICA AÑADIDA! Preseleccionamos el estado actual.
-			    debugger;
 				if (adminDataToCorrect.status) {
 			        const statusButton = UI.correctionStatusButtons.querySelector(`[data-status="${adminDataToCorrect.status}"]`);
 			        if (statusButton) {
@@ -3623,7 +3621,6 @@ Furosemida 40mg al día"></textarea>
 					const target = e.target;
 					if (target.closest('.reason-btn')) {
 						const reasonButton = target.closest('.reason-btn');
-						debugger;
 						const reasonText = reasonButton.dataset.reason;
 						UI.reasonModal.querySelectorAll('.reason-btn').forEach(btn => btn.classList.remove('selected'));
 						reasonButton.classList.add('selected');
@@ -3975,7 +3972,6 @@ Furosemida 40mg al día"></textarea>
 					if (!target) return;
 
 					if (UIState.currentRole === 'medico') {
-				        debugger;
 						if (target.id === 'edit-sheet-btn') this.enterDoctorEditMode();
 				        if (target.id === 'authorize-draft-btn') this.authorizeDoctorDraft();
 				        if (target.id === 'cancel-draft-btn') this.cancelDoctorDraft();
